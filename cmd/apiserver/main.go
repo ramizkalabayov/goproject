@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/ramizkalabayov/goproject/"
+	"github.com/ramizkalabayov/goproject/internal/app/apiserver"
 )
 
 func main() {
