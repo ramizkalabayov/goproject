@@ -1,9 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"log"
+
+	"github.com/ramizkalabayov/goproject/internal/app/apiserver"
 )
 
 func main() {
-	fmt.Println("Hello World")
+	s := apiserver.New()
+	if err := s.Start(); err != nil {
+		log.Fatal(err)
+	}
 }
