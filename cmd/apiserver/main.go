@@ -16,6 +16,7 @@ func init() {
 	flag.StringVar(&configPath, "config-path", "configs/apiserver.toml", "path to config file")
 }
 
+// Main function
 func main() {
 
 	flag.Parse()
