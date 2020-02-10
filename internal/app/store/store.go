@@ -1,6 +1,9 @@
 package store
 
-import "database/sql"
+import (
+	"database/sql"
+	"fmt"
+)
 
 // Store ...
 type Store struct {
@@ -29,6 +32,10 @@ func (s *Store) Open() error {
 	s.db = db
 
 	return nil
+}
+
+func ramiz() {
+	fmt.Println("GitHub test")
 }
 
 // Close ...
