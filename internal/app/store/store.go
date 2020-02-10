@@ -15,7 +15,7 @@ func New(config *Config) *Store {
 	}
 }
 
-// Open ...
+// Open ...d
 func (s *Store) Open() error {
 	db, err := sql.Open("postgres", s.config.DatabaseURL)
 	if err != nil {
