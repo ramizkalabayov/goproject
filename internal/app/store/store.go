@@ -2,7 +2,8 @@ package store
 
 import (
 	"database/sql"
-	"fmt"
+
+	_ "github.com/lib/pq"
 )
 
 // Store ...
@@ -18,7 +19,7 @@ func New(config *Config) *Store {
 	}
 }
 
-// Open ...d
+// Open ...
 func (s *Store) Open() error {
 	db, err := sql.Open("postgres", s.config.DatabaseURL)
 	if err != nil {
@@ -32,10 +33,6 @@ func (s *Store) Open() error {
 	s.db = db
 
 	return nil
-}
-
-func ramiz() {
-	fmt.Println("GitHub test")
 }
 
 // Close ...
